@@ -52,7 +52,7 @@
                     <th>{{$item->login}}</th>
                     <th>{{$item->password}}</th>
                     <th>{{$item->role->name}}</th>
-                    <th><a href="#">Details</a></th>
+                    <th><a href="{{ url('/admin/admin_user_details',[$item->id])}}">Details</a></th>
                 </tr>
             @endforeach
             </tbody>

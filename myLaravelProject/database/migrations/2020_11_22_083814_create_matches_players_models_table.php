@@ -16,11 +16,11 @@ class CreateMatchesPlayersModelsTable extends Migration
         Schema::create('matches_players_models', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('match_id');
-            $table->foreign('match_id')->references('id')->on('matches_models');
+            $table->foreign('match_id')->references('id')->on('matches_models')->onDelete('cascade');
             $table->unsignedBigInteger('scored_player_id');
-            $table->foreign('scored_player_id')->references('id')->on('player_models');
+            $table->foreign('scored_player_id')->references('id')->on('player_models')->onDelete('cascade');
             $table->unsignedBigInteger('assisted_player_id');
-            $table->foreign('assisted_player_id')->references('id')->on('player_models');
+            $table->foreign('assisted_player_id')->references('id')->on('player_models')->onDelete('cascade');
             $table->string('goal_time');
         });
     }

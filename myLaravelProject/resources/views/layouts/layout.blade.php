@@ -75,6 +75,15 @@
                     <li><a href="/contact">Contact</a></li>
                     <li><a href="/login">Login</a></li>
                     <li><a href="/admin">Admin</a></li>
+                    <?php
+
+                    if (session_status() == PHP_SESSION_NONE) {
+                        session_start();
+                    }
+                    if (isset($_SESSION['currentUser'])) {
+                        echo '<li><a href="/profile">Profile</a></li>';
+                    }
+                    ?>
                 </ul>
             </div>
         </nav>

@@ -16,11 +16,11 @@ class CreateMatchesModelsTable extends Migration
         Schema::create('matches_models', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('home_club_id');
-            $table->foreign('home_club_id')->references('id')->on('club_models');
+            $table->foreign('home_club_id')->references('id')->on('club_models')->onDelete('cascade');
             $table->unsignedBigInteger('guest_club_id');
-            $table->foreign('guest_club_id')->references('id')->on('club_models');
+            $table->foreign('guest_club_id')->references('id')->on('club_models')->onDelete('cascade');
             $table->unsignedBigInteger('round_id');
-            $table->foreign('round_id')->references('id')->on('round_models');
+            $table->foreign('round_id')->references('id')->on('round_models')->onDelete('cascade');
         });
     }
 

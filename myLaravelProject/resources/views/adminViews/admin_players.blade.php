@@ -65,7 +65,7 @@
                     <th>{{$item->birthday}}</th>
                     <th>{{$item->position->name}}</th>
                     <th>{{$item->club->name}}</th>
-                    <th><a href="#">Details</a></th>
+                    <th><a href="{{ url('/admin/admin_player_details',[$item->id])}}">Details</a></th>
                 </tr>
             @endforeach
             </tbody>

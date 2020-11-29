@@ -14,6 +14,20 @@
     <div class="site-section">
         <div class="container">
             <div class="row mb-5">
+                @foreach($news as $item)
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="post-entry">
+                        <div class="image">
+                            <img src="{{ asset('images/hero_bg_03.jpg')}}" alt="Image" class="img-fluid">
+                        </div>
+                        <div class="text p-4">
+                            <h2 class="h5 text-black"><a href="#">{{$item->title}}</a></h2>
+                            <span class="text-uppercase date d-block mb-3"><small>{{$item->author->login}} &bullet; {{$item->posted_date}}</small></span>
+                            <p class="mb-0">{{$item->text}}</p>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="post-entry">
                         <div class="image">

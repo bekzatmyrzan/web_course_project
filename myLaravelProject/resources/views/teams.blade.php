@@ -18,6 +18,16 @@
                     <h2 class="text-black">Teams</h2>
                 </div>
             </div>
+            <div class="row">
+                @foreach($clubs as $item)
+                    <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
+                        <div class="player mb-5">
+                            <img src="{{$item->club_logo_picture}}" alt="Image" class="img-fluid image rounded-circle">
+                            <h2>{{$item->name}}</h2>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
 
             <div class="row">
                 <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">

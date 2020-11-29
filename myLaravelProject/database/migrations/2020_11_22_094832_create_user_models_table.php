@@ -18,7 +18,7 @@ class CreateUserModelsTable extends Migration
             $table->string('login');
             $table->string('password');
             $table->unsignedBigInteger('role_id');
-            $table->foreign('role_id')->references('id')->on('role_models');
+            $table->foreign('role_id')->references('id')->on('role_models')->onDelete('cascade');
         });
     }
 

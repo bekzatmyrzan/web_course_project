@@ -19,9 +19,9 @@ class CreatePlayerModelsTable extends Migration
             $table->string('surname');
             $table->string('birthday');
             $table->unsignedBigInteger('position_id');
-            $table->foreign('position_id')->references('id')->on('position_models');
+            $table->foreign('position_id')->references('id')->on('position_models')->onDelete('cascade');
             $table->unsignedBigInteger('club_id');
-            $table->foreign('club_id')->references('id')->on('club_models');
+            $table->foreign('club_id')->references('id')->on('club_models')->onDelete('cascade');
         });
     }
 

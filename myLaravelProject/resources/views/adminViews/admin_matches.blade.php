@@ -60,7 +60,7 @@
                     <th>{{$item->guest_club->name}}</th>
                     <th>{{$item->round->number}}</th>
                     <th>{{$item->name}}</th>
-                    <th><a href="#">Details</a></th>
+                    <th><a href="{{ url('/admin/admin_match_details',[$item->id])}}">Details</a></th>
                 </tr>
             @endforeach
             </tbody>

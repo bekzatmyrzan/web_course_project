@@ -45,16 +45,30 @@
             <button type="submit" class="btn btn-success">Add new club</button>
         </form>
 
-        <h1>All clubs:</h1>
-        @foreach($data['clubs'] as $item)
-            <div class="alert-warning">
-                <h6>{{$item->name}}</h6>
-                <p>{{$item->club_logo_picture}}</p>
-                <p>{{$item->founded_year}}</p>
-                <p>{{$item->city->name}}</p>
-                <p>{{$item->stadium->name}}</p>
-            </div>
-        @endforeach
+        <table class="table-striped container-fluid">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Founded year</th>
+                <th scope="col">City</th>
+                <th scope="col">Stadium</th>
+                <th scope="col">Details</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach($data['clubs'] as $item)
+                <tr>
+                    <th>{{$item->id}}</th>
+                    <th>{{$item->name}}</th>
+                    <th>{{$item->founded_year}}</th>
+                    <th>{{$item->city->name}}</th>
+                    <th>{{$item->stadium->name}}</th>
+                    <th><a href="{{ url('/admin/admin_club_details',[$item->id])}}">Details</a></th>
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
     </div>
 @endsection
 

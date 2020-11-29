@@ -134,24 +134,24 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/adminViews" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\myLaravelProject\resources\views" />
+      <recent name="C:\xampp\htdocs\myLaravelProject\resources\views\adminViews" />
+      <recent name="C:\xampp\htdocs\myLaravelProject\resources\views\layouts" />
+      <recent name="C:\xampp\htdocs\myLaravelProject\resources\js" />
+      <recent name="C:\xampp\htdocs\myLaravelProject\resources\css" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\myLaravelProject\resources\views\adminViews" />
       <recent name="C:\xampp\htdocs\myLaravelProject\resources\views\layouts" />
       <recent name="C:\xampp\htdocs\myLaravelProject\public" />
       <recent name="C:\xampp\htdocs\myLaravelProject\resources" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\myLaravelProject\resources\views\adminViews" />
-      <recent name="C:\xampp\htdocs\myLaravelProject\resources\views\layouts" />
-      <recent name="C:\xampp\htdocs\myLaravelProject\resources\views" />
-      <recent name="C:\xampp\htdocs\myLaravelProject\resources\js" />
-      <recent name="C:\xampp\htdocs\myLaravelProject\resources\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -183,6 +183,16 @@
       <workItem from="1605981679621" duration="5838000" />
       <workItem from="1606029852935" duration="6447000" />
       <workItem from="1606048113149" duration="4609000" />
+      <workItem from="1606113162106" duration="187000" />
+      <workItem from="1606115814422" duration="4426000" />
+      <workItem from="1606130422812" duration="3081000" />
+      <workItem from="1606137840839" duration="3111000" />
+      <workItem from="1606146310727" duration="1895000" />
+      <workItem from="1606356798393" duration="7061000" />
+      <workItem from="1606486265388" duration="671000" />
+      <workItem from="1606545897547" duration="8019000" />
+      <workItem from="1606558011810" duration="3071000" />
+      <workItem from="1606618159258" duration="1758000" />
     </task>
     <servers />
   </component>
@@ -190,18 +200,26 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="526" y="236" key="#Notifications" timestamp="1606618238725">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="526" y="236" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1606618238725" />
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606034768599">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1606034768599" />
+    <state x="545" y="325" key="ComposerInitDialogKey" timestamp="1606561151054">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="545" y="325" key="ComposerInitDialogKey/0.0.1536.824@0.0.1536.824" timestamp="1606561151054" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1605760205503">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605760205503" />
-    <state x="399" y="64" key="SettingsEditor" timestamp="1606035025661">
+    <state x="399" y="64" key="SettingsEditor" timestamp="1606356816529">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="399" y="64" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1606035025661" />
+    <state x="399" y="64" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1606356816529" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1606051492783">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -1,8 +1,6 @@
 @extends('layouts.admin_layout')
 @section('mainContent')
     <div class="col-9">
-        <h2>Current User:</h2>
-
         <h6>----------</h6>
         <h2>Admin Page</h2>
         <h2>Stadiums</h2>
@@ -17,6 +15,11 @@
                 </ul>
             </div>
         @endif
+
+        <form method="post" action="/logout">
+            @csrf
+            <button type="submit" class="btn btn-danger">Logout</button>
+        </form>
 
         <form method="post" action="/admin/add_stadium">
             @csrf
@@ -35,15 +38,30 @@
             <button type="submit" class="btn btn-success">Add new stadium</button>
         </form>
 
-        <h1>All stadiums:</h1>
-        @foreach($stadiums as $item)
-            <div class="alert-warning">
-                <h6>{{$item->name}}</h6>
-                <p>{{$item->address}}</p>
-                <p>{{$item->capacity}}</p>
-                <p>{{$item->builded_year}}</p>
-            </div>
-        @endforeach
+        <table class="table-striped container-fluid">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Capacity</th>
+                <th scope="col">Build year</th>
+                <th scope="col">Details</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach($stadiums as $item)
+                <tr>
+                    <th>{{$item->id}}</th>
+                    <th>{{$item->name}}</th>
+                    <th>{{$item->address}}</th>
+                    <th>{{$item->capacity}}</th>
+                    <th>{{$item->builded_year}}</th>
+                    <th><a href="{{ url('/admin/admin_stadium_details',[$item->id])}}">Details</a></th>
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
     </div>
 @endsection
 

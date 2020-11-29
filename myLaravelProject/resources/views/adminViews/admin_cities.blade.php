@@ -44,7 +44,7 @@
                 <tr>
                     <th>{{$item->id}}</th>
                     <th>{{$item->name}}</th>
-                    <th><a href="{{route('admin_city_details',$item->id)}}">Details</a></th>
+                    <th><a href="{{ url('/admin/admin_city_details',[$item->id])}}">Details</a></th>
                 </tr>
             @endforeach
             </tbody>

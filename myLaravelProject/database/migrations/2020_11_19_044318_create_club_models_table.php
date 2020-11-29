@@ -19,10 +19,9 @@ class CreateClubModelsTable extends Migration
             $table->text('club_logo_picture');
             $table->integer('founded_year');
             $table->unsignedBigInteger('stadium_id');
-            $table->foreign('stadium_id')->references('id')->on('stadium_models');
+            $table->foreign('stadium_id')->references('id')->on('stadium_models')->onDelete('cascade');
             $table->unsignedBigInteger('city_id');
-            $table->foreign('city_id')->references('id')->on('city_models');
-
+            $table->foreign('city_id')->references('id')->on('city_models')->onDelete('cascade');
         });
     }
 

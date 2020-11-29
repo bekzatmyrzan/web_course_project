@@ -18,7 +18,7 @@ class CreateNewsModelsTable extends Migration
             $table->string('title');
             $table->text('text');
             $table->string('posted_date');
-            $table->unsignedBigInteger('author_id');
+            $table->unsignedBigInteger('author_id')->onDelete('cascade');
             $table->foreign('author_id')->references('id')->on('user_models');
         });
     }
