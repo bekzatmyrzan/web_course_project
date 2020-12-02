@@ -24,6 +24,9 @@
             <label for="text">Text:</label>
             <textarea name="text" id="text" placeholder="Text of news" class="form-control"></textarea>
 
+            <label for="photo_url">URL:</label>
+            <textarea name="photo_url" id="photo_url" placeholder="URL" class="form-control"></textarea>
+
             <label for="posted_date">Posted date:</label>
             <input type="text" name="posted_date" id="posted_date" placeholder="Date of post" class="form-control">
 
@@ -44,6 +47,7 @@
                 <th scope="col">ID</th>
                 <th scope="col">Title</th>
                 <th scope="col">Text</th>
+                <th scope="col">URL</th>
                 <th scope="col">Author</th>
                 <th scope="col">        </th>
             </tr>
@@ -54,6 +58,7 @@
                     <th>{{$item->id}}</th>
                     <th>{{$item->title}}</th>
                     <th>{{$item->text}}</th>
+                    <th>{{$item->photo_url}}</th>
                     <th>{{$item->author->login}}</th>
                     <th><a href="#">Details</a></th>
                 </tr>

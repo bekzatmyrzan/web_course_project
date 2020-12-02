@@ -134,24 +134,24 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\myLaravelProject\resources\views" />
-      <recent name="C:\xampp\htdocs\myLaravelProject\resources\views\adminViews" />
-      <recent name="C:\xampp\htdocs\myLaravelProject\resources\views\layouts" />
-      <recent name="C:\xampp\htdocs\myLaravelProject\resources\js" />
-      <recent name="C:\xampp\htdocs\myLaravelProject\resources\css" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\myLaravelProject\resources\views\adminViews" />
       <recent name="C:\xampp\htdocs\myLaravelProject\resources\views\layouts" />
       <recent name="C:\xampp\htdocs\myLaravelProject\public" />
       <recent name="C:\xampp\htdocs\myLaravelProject\resources" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\myLaravelProject\app\Http\Controllers" />
+      <recent name="C:\xampp\htdocs\myLaravelProject\resources\views" />
+      <recent name="C:\xampp\htdocs\myLaravelProject\resources\views\adminViews" />
+      <recent name="C:\xampp\htdocs\myLaravelProject\resources\views\layouts" />
+      <recent name="C:\xampp\htdocs\myLaravelProject\resources\js" />
     </key>
   </component>
   <component name="RunManager">
@@ -193,6 +193,9 @@
       <workItem from="1606545897547" duration="8019000" />
       <workItem from="1606558011810" duration="3071000" />
       <workItem from="1606618159258" duration="1758000" />
+      <workItem from="1606620343870" duration="272000" />
+      <workItem from="1606816304693" duration="4222000" />
+      <workItem from="1606907252752" duration="4027000" />
     </task>
     <servers />
   </component>

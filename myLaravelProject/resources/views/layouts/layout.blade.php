@@ -6,21 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,700">
     <link rel="stylesheet" href="{{asset('fonts/icomoon/style.css')}}">
 
-    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}" type="text/css" >
-    <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}" type="text/css" >
-    <link rel="stylesheet" href="{{asset('css/jquery-ui.css')}}"  type="text/css" >
-    <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}" type="text/css" >
-    <link rel="stylesheet" href="{{asset('css/owl.theme.default.min.css')}}" type="text/css" >
+    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('css/jquery-ui.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('css/owl.theme.default.min.css')}}" type="text/css">
 
 
-    <link rel="stylesheet" href="{{asset('css/aos.css')}}" type="text/css" >
+    <link rel="stylesheet" href="{{asset('css/aos.css')}}" type="text/css">
 
-    <link rel="stylesheet" href="{{asset('css/style.css')}}" type="text/css" >
-
+    <link rel="stylesheet" href="{{asset('css/style.css')}}" type="text/css">
 
 
 </head>
@@ -51,8 +49,14 @@
                         <a href="#" class="text-secondary px-2"><span class="icon-linkedin"></span></a>
                     </div>
                     <div class="col-6 col-md-9 text-right">
-                        <div class="d-inline-block"><a href="#" class="text-secondary p-2 d-flex align-items-center"><span class="icon-envelope mr-3"></span> <span class="d-none d-md-block">myrzanbekzat@gmail.com</span></a></div>
-                        <div class="d-inline-block"><a href="#" class="text-secondary p-2 d-flex align-items-center"><span class="icon-phone mr-0 mr-md-3"></span> <span class="d-none d-md-block">+7 747 635 7934</span></a></div>
+                        <div class="d-inline-block"><a href="#"
+                                                       class="text-secondary p-2 d-flex align-items-center"><span
+                                    class="icon-envelope mr-3"></span> <span class="d-none d-md-block">myrzanbekzat@gmail.com</span></a>
+                        </div>
+                        <div class="d-inline-block"><a href="#"
+                                                       class="text-secondary p-2 d-flex align-items-center"><span
+                                    class="icon-phone mr-0 mr-md-3"></span> <span class="d-none d-md-block">+7 747 635 7934</span></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -63,7 +67,9 @@
                     <a href="#"><img src="{{ asset('images/logo.png') }}" alt=""></a>
                 </div>
 
-                <div class="d-inline-block d-md-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
+                <div class="d-inline-block d-md-none ml-md-0 mr-auto py-3"><a href="#"
+                                                                              class="site-menu-toggle js-menu-toggle text-white"><span
+                            class="icon-menu h3"></span></a></div>
 
                 <ul class="site-menu js-clone-nav d-none d-md-block">
                     <li><a href="/">Home</a></li>
@@ -74,14 +80,20 @@
                     <li><a href="/registration">Registration</a></li>
                     <li><a href="/contact">Contact</a></li>
                     <li><a href="/login">Login</a></li>
-                    <li><a href="/admin">Admin</a></li>
                     <?php
-
                     if (session_status() == PHP_SESSION_NONE) {
                         session_start();
                     }
                     if (isset($_SESSION['currentUser'])) {
                         echo '<li><a href="/profile">Profile</a></li>';
+                    }
+                    if (isset($_SESSION['role'])) {
+                        if ($_SESSION['role'] === "ROLE_USER") {
+                        }
+                        else {
+                            echo '<li><a href="/admin">Admin</a></li>';
+                        }
+
                     }
                     ?>
                 </ul>
@@ -97,7 +109,9 @@
                 <div class="col-lg-4">
                     <div class="mb-5">
                         <h3 class="footer-heading mb-4">About SportQ</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe pariatur reprehenderit vero atque, consequatur id ratione, et non dignissimos culpa? Ut veritatis, quos illum totam quis blanditiis, minima minus odio!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe pariatur reprehenderit vero
+                            atque, consequatur id ratione, et non dignissimos culpa? Ut veritatis, quos illum totam quis
+                            blanditiis, minima minus odio!</p>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-5 mb-lg-0">
@@ -143,7 +157,10 @@
                         <h3 class="footer-heading mb-4">Watch Video</h3>
 
                         <div class="block-16">
-                            <iframe width="460" height="315" src="https://www.youtube.com/embed/IT3JikWtcrA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="460" height="315" src="https://www.youtube.com/embed/IT3JikWtcrA"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
                         </div>
 
                     </div>
@@ -154,7 +171,9 @@
 
                         <form action="#" method="post">
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
+                                <input type="text" class="form-control border-secondary text-white bg-transparent"
+                                       placeholder="Enter Email" aria-label="Enter Email"
+                                       aria-describedby="button-addon2">
                                 <div class="input-group-append">
                                     <button class="btn btn-primary" type="button" id="button-addon2">Send</button>
                                 </div>
@@ -169,7 +188,10 @@
             <div class="row pt-5 mt-5 text-center">
                 <div class="col-md-12">
                     <p>
-                        Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved
+                        Copyright &copy;<script data-cfasync="false"
+                                                src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                        <script>document.write(new Date().getFullYear());</script>
+                        All rights reserved
                     </p>
                 </div>
             </div>
