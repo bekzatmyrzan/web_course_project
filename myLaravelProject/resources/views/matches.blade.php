@@ -211,7 +211,7 @@
                         </div>
                         <div class="col-md-4 col-lg-4 text-center mb-4 mb-lg-0">
                             <div class="d-inline-block">
-                                <div class="bg-black py-2 px-4 mb-2 text-white d-inline-block rounded"><span class="h5">2:2</span>
+                                <div class="bg-black py-2 px-4 mb-2 text-white d-inline-block rounded"><span class="h5">4:1</span>
                                 </div>
                             </div>
                         </div>
@@ -251,7 +251,7 @@
                         </div>
                         <div class="col-md-4 col-lg-4 text-center mb-4 mb-lg-0">
                             <div class="d-inline-block">
-                                <div class="bg-black py-2 px-4 mb-2 text-white d-inline-block rounded"><span class="h5">0:0</span>
+                                <div class="bg-black py-2 px-4 mb-2 text-white d-inline-block rounded"><span class="h5">4:1</span>
                                 </div>
                             </div>
                         </div>

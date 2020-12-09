@@ -18,6 +18,7 @@ use Illuminate\Auth\Authenticatable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use function GuzzleHttp\Promise\all;
 
 class MainController extends Controller
 {
@@ -84,13 +85,59 @@ class MainController extends Controller
 
     public function registration()
     {
-        return view('registration');
+        $error = "no";
+        return view('registration', ['error' => $error]);
+    }
+
+    public function registerUser(Request $request)
+    {
+        $valid = $request->validate([
+            'email' => 'required|min:2|max:50',
+            'password' => 'required|min:2|max:50'
+        ]);
+
+        $user = new UserModel();
+        $users = UserModel::all();
+        $roles = RoleModel::all()->where('name', 'ROLE_USER');
+        $user->login = $request->input('email');
+        $user->password = $request->input('password');
+        $re_password = $request->input('re_password');
+        foreach ($users as $u) {
+            if ($u->login === $user->login) {
+                $error = "User exist";
+                return view('registration', ['error' => $error]);
+            }
+        }
+        if ($user->password == $re_password) {
+            $user->role_id = 3;
+            $user->save();
+            return redirect()->route('login');
+        } else {
+            $error = "Incorrect re-password";
+            return view('registration', ['error' => $error]);
+        }
     }
 
     public function teams()
     {
         $clubs = new ClubModel();
         return view('teams', ['clubs' => $clubs->all()]);
+    }
+
+
+    public function team_details(Request $request)
+    {
+        $clubs = ClubModel::all();
+        foreach ($clubs as $c) {
+            if ($c->id == $request->query('id')) {
+                $data = array();
+                $data['club'] = $c;
+                $players = PlayerModel::all()->where('club_id', $c->id);
+                $data['players'] = $players->all();
+                return view('team_details', compact("data"));
+            }
+        }
+        return redirect()->route('profile');
     }
 
     public function login()

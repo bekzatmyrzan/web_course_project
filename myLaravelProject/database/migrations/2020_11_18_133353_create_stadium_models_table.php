@@ -18,7 +18,6 @@ class CreateStadiumModelsTable extends Migration
             $table->string('name');
             $table->string('address');
             $table->integer('capacity');
-            $table->integer('club_id');
             $table->integer('builded_year');
         });
     }

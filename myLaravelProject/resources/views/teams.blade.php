@@ -22,7 +22,7 @@
                 @foreach($clubs as $item)
                     <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
                         <div class="player mb-5">
-                            <img src="{{$item->club_logo_picture}}" alt="Image" class="img-fluid image rounded-circle">
+                            <img src="{{$item->club_logo_picture}}" href="/team_details?id={{$item->id}}" alt="Image" class="img-fluid image rounded-circle">
                             <h2>{{$item->name}}</h2>
                         </div>
                     </div>

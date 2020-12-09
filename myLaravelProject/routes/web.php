@@ -29,9 +29,11 @@ Route::get('/matches', [\App\Http\Controllers\MainController::class,'matches']);
 
 Route::get('/news', [\App\Http\Controllers\MainController::class,'news']);
 
-Route::get('/registration', [\App\Http\Controllers\MainController::class,'registration']);
+Route::get('/registration', [\App\Http\Controllers\MainController::class,'registration'])->name('registration');
 
 Route::get('/teams', [\App\Http\Controllers\MainController::class,'teams']);
+
+Route::get('/team_details', [\App\Http\Controllers\MainController::class,'team_details']);
 
 Route::get('/login', [\App\Http\Controllers\MainController::class,'login'])->name('login');
 
@@ -114,6 +116,8 @@ Route::post('/admin/admin_delete_user/{id}', [\App\Http\Controllers\AdminControl
 Route::post('/admin/edit_user', [\App\Http\Controllers\AdminController::class,'edit_user']);
 
 Route::post('/admin/add_user', [\App\Http\Controllers\AdminController::class,'add_user']);
+
+Route::post('/registerUser', [\App\Http\Controllers\MainController::class,'registerUser']);
 
 Route::post('/admin/add_news', [\App\Http\Controllers\AdminController::class,'add_news']);
 

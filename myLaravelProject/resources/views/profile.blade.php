@@ -10,9 +10,6 @@
                         if (isset($_SESSION['currentUser'])) {
                             echo $_SESSION["currentUser"];
                         }
-                        if (isset($_SESSION['role'])) {
-                            echo $_SESSION["role"];
-                        }
                         ?></p>
                     <form method="post" action="/logout">
                         @csrf
@@ -45,21 +42,6 @@
                 @endif
 
             </div>
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <div class="site-block-27">
-                        <ul>
-                            <li><a href="#">&lt;</a></li>
-                            <li class="active"><span>1</span></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li><a href="#">&gt;</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
             <form method="post" action="/profile/add_news">
                 @csrf
                 <label for="title">Title:</label>
@@ -67,6 +49,9 @@
 
                 <label for="text">Text:</label>
                 <textarea name="text" id="text" placeholder="Text of news" class="form-control"></textarea>
+
+                <label for="photo_url">URL:</label>
+                <textarea name="photo_url" id="photo_url" placeholder="URL" class="form-control"></textarea>
 
                 <br>
                 <button type="submit" class="btn btn-success">Add news</button>

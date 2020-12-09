@@ -18,7 +18,7 @@
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="post-entry">
                         <div class="image">
-                            <img src="{{ asset('images/hero_bg_03.jpg')}}" alt="Image" class="img-fluid">
+                            <img src="{{ $item->photo_url}}" alt="Image" class="img-fluid">
                         </div>
                         <div class="text p-4">
                             <h2 class="h5 text-black"><a href="#">{{$item->title}}</a></h2>

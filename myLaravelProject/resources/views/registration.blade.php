@@ -17,36 +17,32 @@
         <div class="container">
             <div class="row align-items-first">
                 <div class="col-md-7">
-                    <form action="#" method="post" class="bg-white">
-
+                    <form action="/registerUser" method="post" class="bg-white">
+                        @csrf
                         <div class="p-3 p-lg-5 border">
+
                             <div class="form-group row">
-                                <div class="col-md-6">
-                                    <label for="c_fname" class="text-black">First Name <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="c_fname" name="c_fname">
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="c_lname" class="text-black">Last Name <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="c_lname" name="c_lname">
+                                <div class="col-md-12">
+                                    <label for="email" class="text-danger">@if($error!="no"){{ $error }} @endif </label>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label for="c_email" class="text-black">Email <span class="text-danger">*</span></label>
-                                    <input type="email" class="form-control" id="c_email" name="c_email" placeholder="">
+                                    <label for="email" class="text-black">Email <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label for="c_subject" class="text-black">Password </label>
-                                    <input type="password" class="form-control" id="c_subject" name="c_subject">
+                                    <label for="password" class="text-black">Password </label>
+                                    <input type="password" class="form-control" id="password" name="password">
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label for="c_message" class="text-black">Re-password </label>
-                                    <input  type="password" name="c_message" id="c_message" class="form-control">
+                                    <label for="re_password" class="text-black">Re-password </label>
+                                    <input  type="password" name="re_password" id="re_password" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row">
